@@ -10,7 +10,7 @@ export default function App() {
       <Header />
       <main className="container">
         {animals.map((animal) => (
-          <Card key={animal.name} name={animal.name} likes={animal.likes} />
+          <Card key={animal.name} {...animal} />
         ))}
       </main>
       <Footer />
