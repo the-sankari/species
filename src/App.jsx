@@ -7,6 +7,33 @@ import { useState } from "react"; // Importing the useState hook from React
 
 // Exporting the App component as the default export
 export default function App() {
+  const [animalsData, setAnimalsData] = useState(animals);
+
+  const handleRemoveCard = (animal) => {
+    const updatedAnimalData = animalsData.filter(
+      (item) => item.name !== animal
+    );
+    setAnimalsData(updatedAnimalData);
+  };
+
+  const handleLikes = (animal, action) => {
+    const updatedAnimals = animalsData.map((item) => {
+      if (item.name === animal) {
+        if (action == "add") {
+          return { ...item, likes: item.likes + 1 };
+        } else {
+          if (item.likes === 0) {
+            return item;
+          } else {
+            return { ...item, likes: item.likes - 1 };
+          }
+        }
+      } else {
+        return item;
+      }
+    });
+    setAnimalsData(updatedAnimals);
+  };
   // Returning the JSX content of the App component
   return (
     <>
@@ -17,13 +44,22 @@ export default function App() {
 
       {/* <!-- ========== Start main ========== --> */}
       <main className="container">
-        {animals.map(
-          (
-            animal //Mapping through the animals array and rendering a Card component for each animal object
-          ) => (
-            <Card key={animal.name} {...animal} /> // // Passing the animal object as props and using the animal's name as the key
-          )
-        )}
+        {/* //Mapping through the animals array and rendering a Card component for each animal object */}
+        {animalsData.map((animal) => (
+          <Card
+            key={animal.name}
+            {...animal}
+            removeCard={() => {
+              handleRemoveCard(animal.name);
+            }}
+            addLike={() => {
+              handleLikes(animal.name, "add");
+            }}
+            removeLike={() => {
+              handleLikes(animal.name, "remove");
+            }}
+          /> // // Passing the animal object as props and using the animal's name as the key
+        ))}
       </main>
       {/* <!-- ========== End main ========== --> */}
 
