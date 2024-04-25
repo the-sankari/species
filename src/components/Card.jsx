@@ -15,7 +15,7 @@ export default function Card({ name, likes, addLike, removeCard, removeLike }) {
       {/* Image for the card */}
       <img
         src={`https://source.unsplash.com/400x400?${name}`}
-        alt="..."
+        alt="..." 
         className="card-img-top"
       />
       {/* Card body containing the name */}

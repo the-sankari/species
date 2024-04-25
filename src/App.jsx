@@ -8,6 +8,7 @@ import { useState } from "react"; // Importing the useState hook from React
 // Exporting the App component as the default export
 export default function App() {
   const [animalsData, setAnimalsData] = useState(animals);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleRemoveCard = (animal) => {
     const updatedAnimalData = animalsData.filter(
@@ -34,12 +35,28 @@ export default function App() {
     });
     setAnimalsData(updatedAnimals);
   };
+
+  const handleSearch = (event) => {
+    // Get the current value of the search input field and convert it to lowercase
+    const searchTerm = event.target.value.toLowerCase();
+
+    // Filter the animals array to only include animals whose name includes the search term
+    const filteredAnimals = animals.filter((animal) => {
+      return animal.name.toLowerCase().includes(searchTerm);
+    });
+
+    // Update the searchTerm state with the current search term
+    setSearchTerm(searchTerm);
+
+    // Update the animalsData state with the filtered array of animals
+    setAnimalsData(filteredAnimals);
+  };
   // Returning the JSX content of the App component
   return (
     <>
       {/* Rendering the Header component */}
       {/* <!-- ========== Start Header ========== --> */}
-      <Header />
+      <Header searchTerm={searchTerm} handleSearch={handleSearch} />
       {/* <!-- ========== End Header ========== --> */}
 
       {/* <!-- ========== Start main ========== --> */}

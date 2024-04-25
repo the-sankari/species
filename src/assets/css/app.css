@@ -1,5 +1,5 @@
 body {
-  background-color: purple;
+  background-color: fffff0;
   color: #fff;
 }
 
@@ -27,4 +27,8 @@ main {
 
 .likes {
   font-size: 12px;
+}
+
+.card-title{
+  text-transform: capitalize;
 }
