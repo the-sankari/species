@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function Header({searchTerm, handleSearch}) {
+export default function Header({ searchTerm, handleSearch }) {
   return (
     <header className="p-3 bg-dark text-white">
       <div className="container">
@@ -27,7 +27,7 @@ export default function Header({searchTerm, handleSearch}) {
             </li>
             <li>
               <a href="#" className="nav-link px-2 text-white">
-                Birds 
+                Birds
               </a>
             </li>
             <li>
@@ -47,15 +47,6 @@ export default function Header({searchTerm, handleSearch}) {
               aria-label="Search"
             ></input>
           </form>
-
-          <div className="text-end">
-            <button type="button" className="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-warning">
-              Sign-up
-            </button>
-          </div>
         </div>
       </div>
     </header>
