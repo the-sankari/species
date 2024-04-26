@@ -53,6 +53,7 @@ The application displays a list of species in card components. Each card shows t
 * React
 * JavaScript
 * CSS
+* Bootstrap 5.3
 
 ## License
 

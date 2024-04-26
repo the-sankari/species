@@ -60,8 +60,10 @@ export default function App() {
       {/* <!-- ========== End Header ========== --> */}
 
       {/* <!-- ========== Start main ========== --> */}
-      <main className="container">
+      <main  >
         {/* //Mapping through the animals array and rendering a Card component for each animal object */}
+        <div className="container   card-container">
+
         {animalsData.map((animal) => (
           <Card
             key={animal.name}
@@ -77,6 +79,8 @@ export default function App() {
             }}
           /> // // Passing the animal object as props and using the animal's name as the key
         ))}
+        </div>
+
       </main>
       {/* <!-- ========== End main ========== --> */}
 
