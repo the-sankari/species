@@ -3,6 +3,7 @@ import Footer from "./components/Footer"; // Importing the Footer component
 import "./assets/css/app.css"; // Importing the stylesheet
 import Card from "./components/Card";
 import { animals } from "./animalsList";
+
 import { useState } from "react"; // Importing the useState hook from React
 
 // Exporting the App component as the default export
@@ -60,27 +61,25 @@ export default function App() {
       {/* <!-- ========== End Header ========== --> */}
 
       {/* <!-- ========== Start main ========== --> */}
-      <main  >
+      <main>
         {/* //Mapping through the animals array and rendering a Card component for each animal object */}
         <div className="container   card-container">
-
-        {animalsData.map((animal) => (
-          <Card
-            key={animal.name}
-            {...animal}
-            removeCard={() => {
-              handleRemoveCard(animal.name);
-            }}
-            addLike={() => {
-              handleLikes(animal.name, "add");
-            }}
-            removeLike={() => {
-              handleLikes(animal.name, "remove");
-            }}
-          /> // // Passing the animal object as props and using the animal's name as the key
-        ))}
+          {animalsData.map((animal) => (
+            <Card
+              key={animal.name}
+              {...animal}
+              removeCard={() => {
+                handleRemoveCard(animal.name);
+              }}
+              addLike={() => {
+                handleLikes(animal.name, "add");
+              }}
+              removeLike={() => {
+                handleLikes(animal.name, "remove");
+              }}
+            /> // // Passing the animal object as props and using the animal's name as the key
+          ))}
         </div>
-
       </main>
       {/* <!-- ========== End main ========== --> */}
 
