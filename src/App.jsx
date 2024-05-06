@@ -10,6 +10,13 @@ import CategoryPage from "./routes/CategoryPage.jsx";
 function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
+  const likesHandler = (name, category, action) => {
+    console.log(name, category, action, "was clicked");
+  };
+  const removeHandler = (name, category) => {
+    console.log(name, category ,"removecard was clicked");
+  };
+
   const router = createBrowserRouter([
     { path: "/", element: <Home /> },
     {
