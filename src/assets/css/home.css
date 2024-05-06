@@ -1,0 +1,28 @@
+.home-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.home-page a {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.home-page a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+}
+
+.home-page a img {
+  width: 100%;
+  height: 100%;
+}

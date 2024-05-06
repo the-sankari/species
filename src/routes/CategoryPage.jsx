@@ -7,10 +7,12 @@ function CategoryPage({ ...rest }) {
 
   return (
     <>
-      <h2>{category}</h2>
-      {catergoryItems.map((item) => {
-        return <Card key={item.name} name={item.name} />;
-      })}
+      <h2 className="cat-name">{category}</h2>
+      <div className="card-container">
+        {catergoryItems.map((item) => {
+          return <Card key={item.name} name={item.name} />;
+        })}
+      </div>
     </>
   );
 }

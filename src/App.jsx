@@ -18,7 +18,7 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { path: "/", element: <Home /> },
-        { path: ":categpry", element: <CategoryPage {...zoo} /> },
+        { path: ":category", element: <CategoryPage {...zoo} /> },
         { path: "/about", element: <About /> },
       ],
     },

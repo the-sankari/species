@@ -60,7 +60,9 @@ body {
 }
 
 
-.home-page{
-  display: grid;
 
+
+.cat-name{
+  color: #333;
+  text-transform: capitalize;
 }
