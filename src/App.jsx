@@ -18,7 +18,17 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { path: "/", element: <Home /> },
-        { path: ":category", element: <CategoryPage {...zoo} /> },
+        {
+          path: ":category",
+          element: (
+            <CategoryPage
+              addLike={likesHandler}
+              removeLike={likesHandler}
+              removeCard={removeHandler}
+              {...zoo}
+            />
+          ),
+        },
         { path: "/about", element: <About /> },
       ],
     },
