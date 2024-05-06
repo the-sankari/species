@@ -30,7 +30,7 @@ export default function SpeciesList() {
   return (
     <>
       {species.map((item) => {
-        return <Card key={item.name} {...item} />;
+        <Card key={item.name} {...item} />;
       })}
     </>
   );

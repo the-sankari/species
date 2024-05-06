@@ -1,0 +1,18 @@
+import { useParams } from "react-router-dom";
+import Card from "../components/Card";
+
+function CategoryPage({ ...rest }) {
+  const { category } = useParams();
+  const catergoryItems = rest[category];
+
+  return (
+    <>
+      <h2>{category}</h2>
+      {catergoryItems.map((item) => {
+        return <Card key={item.name} name={item.name} />;
+      })}
+    </>
+  );
+}
+
+export default CategoryPage;

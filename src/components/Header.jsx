@@ -1,39 +1,43 @@
+import { Link, NavLink } from "react-router-dom";
+
+Link;
 /* eslint-disable react/prop-types */
 export default function Header({ searchTerm, handleSearch }) {
   return (
     <header className="p-3 bg-dark text-white sticky-top">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a
-            href="/"
-            className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-          ></a>
+          <h2>
+            <Link className="nav-link px-2 text-white" to="/">
+              Species
+            </Link>
+          </h2>
 
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <a href="#" className="nav-link px-2 text-secondary">
+              <NavLink to="/" className="nav-link px-2 text-white">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="nav-link px-2 text-white">
-                Animal
-              </a>
+              <NavLink to="/animals" className="nav-link px-2 text-white">
+                Animals
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="nav-link px-2 text-white">
-                Fishes
-              </a>
-            </li>
-            <li>
-              <a href="#" className="nav-link px-2 text-white">
+              <NavLink to="/birds" className="nav-link px-2 text-white">
                 Birds
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="nav-link px-2 text-white">
+              <NavLink to="/insects" className="nav-link px-2 text-white">
                 Insects
-              </a>
+              </NavLink>
+            </li>
+            <li>
+            <NavLink to="/fishes" className="nav-link px-2 text-white">
+                Fishes
+              </NavLink>
             </li>
           </ul>
 

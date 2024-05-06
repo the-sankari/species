@@ -58,3 +58,9 @@ body {
 .card-title{
   text-transform: capitalize;
 }
+
+
+.home-page{
+  display: grid;
+
+}
