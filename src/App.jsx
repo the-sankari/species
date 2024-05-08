@@ -6,15 +6,26 @@ import ErrorPage from "./routes/ErrorPage.jsx";
 import Root from "./routes/Root.jsx";
 import { animals, birds, fishes, insects } from "./animalsList.js";
 import CategoryPage from "./routes/CategoryPage.jsx";
+import SinglePage from "./routes/SinglePage.jsx";
 
 function App() {
   const [zoo, setZoo] = useState({ animals, birds, insects, fishes });
 
   const likesHandler = (name, category, action) => {
-    console.log(name, category, action, "was clicked");
+    setZoo((prevZoo) => ({
+      ...prevZoo,
+      [category]: prevZoo[category].map((el) =>
+        el.name === name
+          ? { ...el, likes: el.likes + (action === "add" ? 1 : -1) }
+          : el
+      ),
+    }));
   };
   const removeHandler = (name, category) => {
-    console.log(name, category ,"removecard was clicked");
+    setZoo((prevZoo) => ({
+      ...prevZoo,
+      [category]: prevZoo[category].filter((el) => el.name !== name),
+    }));
   };
 
   const router = createBrowserRouter([
@@ -36,6 +47,7 @@ function App() {
             />
           ),
         },
+        { path: "/:category/:name", element: <SinglePage {...zoo} /> },
         { path: "/about", element: <About /> },
       ],
     },

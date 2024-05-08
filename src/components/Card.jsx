@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // Define the Card component, which displays an image, name, and like button
 // for a given item
+import { Link } from "react-router-dom";
 import "../assets/css/app.css";
 export default function Card({ name, likes, addLike, removeCard, removeLike }) {
   // Return the JSX content of the Card component
@@ -54,6 +55,9 @@ export default function Card({ name, likes, addLike, removeCard, removeLike }) {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Link to={name}>See more</Link>
       </div>
     </div>
   );
