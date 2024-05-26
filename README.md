@@ -58,3 +58,7 @@ The application displays a list of species in card components. Each card shows t
 ## License
 
 This project is licensed under the MIT License.
+
+## Author
+
+* [@kajol](https://github.com/the-sankari)
