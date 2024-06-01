@@ -8,7 +8,7 @@ function SinglePage({ ...rest }) {
   const categoryItem = rest[params.category];
   const data = categoryItem.find((el) => el.name === params.name);
   return (
-    <div className="container singlePage">
+    <div className="container singlePage ">
       <SinglePageCard {...data} />
     </div>
   );
