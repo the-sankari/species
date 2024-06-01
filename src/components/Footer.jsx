@@ -1,8 +1,13 @@
-
 export default function Footer() {
   return (
-    <footer>
-      <small>copyright &copy;kajol sutra dhar 2024</small>
-    </footer>
-  )
+    <>
+      <footer className="footer mt-auto py-3 bg-body-tertiary ">
+        <div className="container text-center">
+          <span className="text-muted">
+            &copy;2024 Copyright:{"kajolsutradhar"}
+          </span>
+        </div>
+      </footer>
+    </>
+  );
 }

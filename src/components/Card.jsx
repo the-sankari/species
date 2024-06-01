@@ -44,7 +44,7 @@ export default function Card({ name, likes, addLike, removeCard, removeLike }) {
             </div>
             <div className="col">
               {/* Button to remove a like */}
-              <button type="button" className="heart-btn">
+              <button type="button" className="heart-btn ">
                 <span
                   className="material-symbols-outlined "
                   onClick={removeLike}
@@ -56,8 +56,8 @@ export default function Card({ name, likes, addLike, removeCard, removeLike }) {
           </div>
         </div>
       </div>
-      <div>
-        <Link to={name}>See more</Link>
+      <div className="text-center p-2">
+        <Link className="btn btn-outline-info" to={name}>See more</Link>
       </div>
     </div>
   );

@@ -4,9 +4,8 @@ import { LuComponent } from "react-icons/lu";
 
 const About = () => {
   return (
-    <div className="about py-5">
-      <h1 className=" border-bottom text-center">About Species Project</h1>
-      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div className="about">
+      <div className="position-relative overflow-hidden  text-center bg-body-tertiary">
         <div className="col-md-6 p-lg-5 mx-auto my-5">
           <h1 className="display-3 fw-bold">Project Overview</h1>
           <h3 className="fw-normal text-muted mb-3">
