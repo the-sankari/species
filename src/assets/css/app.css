@@ -2,9 +2,12 @@ body {
   background-color: fffff0;
   color: #fff;
   width: 100vw !important;
+  height: 100%!important;
 }
 #root {
-  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .header-container {
   background-color: rgb(114, 60, 231);
@@ -94,10 +97,9 @@ h3 {
 }
 
 .footer-container {
-  background-color: #9f4c4c;
+  margin-top: auto;
   color: #fff;
   padding: 20px;
-  position: absolute;
   width: 100vw;
   text-align: center;
   .footer-text {
