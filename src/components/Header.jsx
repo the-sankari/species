@@ -1,6 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-
-Link;
 /* eslint-disable react/prop-types */
 export default function Header({ searchTerm, handleSearch }) {
   return (
@@ -35,8 +33,13 @@ export default function Header({ searchTerm, handleSearch }) {
               </NavLink>
             </li>
             <li>
-            <NavLink to="/fishes" className="nav-link px-2 text-white">
+              <NavLink to="/fishes" className="nav-link px-2 text-white">
                 Fishes
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="nav-link px-2 text-white">
+                About
               </NavLink>
             </li>
           </ul>
