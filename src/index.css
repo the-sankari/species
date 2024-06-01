@@ -19,89 +19,60 @@ body {
   min-height: 100vh;
 }
 
-a {
-  font-weight: 500;
-  color: white;
-  text-decoration: inherit;
-  padding: 0.5rem 0;
-  transition: all ease 5s;
-}
-a::after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0;
-  background-color: orange;
-  transition: all ease 0.5s;
-}
-
-a:hover::after {
-  content: "";
-  width: 100%;
-}
-
-a.active::after {
-  height: 2px;
-  width: 100%;
-  background-color: orange;
-  transition: all ease 0.3s;
-}
-
-h1 a {
-  color: white;
-}
-h1 a:hover {
-  color: inherit;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-header,
-footer {
-  background: #333;
-  color: #fff;
-  padding: 1rem 4rem;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 1rem;
-}
-main {
-  padding: 4rem;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-.boxes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.box {
-  background: white;
-  border-radius: 5px;
+/* About */
+div.about {
   color: #333;
-  padding: 1rem;
 }
 
-.box p:first-child {
-  font-weight: 700;
+.homepage-card {
+  background: url(./assets/img/homepage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.box p:last-child {
-  font-style: italic;
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
 }
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: url(./assets/img/homepage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+.about-icon {
+  font-size: 2rem;
+  color: #333;
+  padding: 10px;
+}
+
+.feature-icons,.learning-icons {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+
