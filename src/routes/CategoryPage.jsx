@@ -18,7 +18,7 @@ function CategoryPage({
 
   return (
     <>
-      <h2 className="cat-name">{category}</h2>
+      <h2 className="category-name">{category}</h2>
       <div className="card-container">
         {filteredItems.map((item) => (
           <Card
